@@ -33,7 +33,7 @@ public class SwaggerConfig {
     private ApiInfo metaInfo() {
 
         ApiInfo apiInfo = new ApiInfo(
-                "Produtos API REST",
+                "PathFinder API REST",
                 "API REST PathFinder.",
                 "1.0",
                 "Terms of Service",
