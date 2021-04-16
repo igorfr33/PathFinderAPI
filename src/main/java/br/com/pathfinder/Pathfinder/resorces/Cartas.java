@@ -25,15 +25,15 @@ public class Cartas {
 	TipoEfeitoRepository tipoEfeitoRepository;
 	
 	@ApiOperation(value="Retorna um Efeito")
-	@GetMapping("/efeitos")
+	@GetMapping("/efeitos/{id}")
 	public Efeito listaEfeito(@PathVariable(value="id") long id){
 		return efeitoRepository.findById(id);
 	}
 	
 	@ApiOperation(value="Retorna um Tipo de Efeito")
-	@GetMapping("/tipoefeito")
-	public TipoEfeito listaTipoEfeito(@PathVariable(value="id") long id){
-		return tipoEfeitoRepository.findById(id);
+	@GetMapping("/tipoefeito/{id_efeito}")
+	public TipoEfeito listaTipoEfeito(@PathVariable(value="id_efeito") long id_efeito){
+		return tipoEfeitoRepository.findById(id_efeito);
 	}
 	
 }

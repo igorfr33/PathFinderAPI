@@ -18,8 +18,6 @@ public class Efeito  implements Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	
 	private long id;
-	private String descricao;
-	
 	public long getId() {
 		return id;
 	}
@@ -32,6 +30,7 @@ public class Efeito  implements Serializable{
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+	private String descricao;
 
 }
 
