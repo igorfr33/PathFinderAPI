@@ -22,6 +22,7 @@ public class Cartas {
 	
 	@Autowired
 	EfeitoRepository efeitoRepository;
+	@Autowired
 	TipoEfeitoRepository tipoEfeitoRepository;
 	
 	@ApiOperation(value="Retorna um Efeito")
