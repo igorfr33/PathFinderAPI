@@ -9,34 +9,34 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name ="TIPO_EFEITO")
-public class TipoEfeito implements Serializable{
+@Table(name ="BOMB_OR_SPELL")
+public class BombOrSpell implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 			
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	
-	private long id;
-	private long id_efeito;
-	private String tipo_efeito;
+	long id;
+	String nome;
+	String descricao;
+	
 	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
 		this.id = id;
 	}
-	public long getId_efeito() {
-		return id_efeito;
+	public String getNome() {
+		return nome;
 	}
-	public void setId_efeito(long id_efeito) {
-		this.id_efeito = id_efeito;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-	public String getTipo_efeito() {
-		return tipo_efeito;
+	public String getDescricao() {
+		return descricao;
 	}
-	public void setTipo_efeito(String tipo_efeito) {
-		this.tipo_efeito = tipo_efeito;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
-
 }
