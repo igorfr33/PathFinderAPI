@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiOperation;
 @RestController
 @RequestMapping(value="/api")
 @Api(value="API REST PathFinder")
-public class Cartas {
+public class Efeitos {
 	
 	@Autowired
 	BludgeoningRepository bludgeoningRepository;
