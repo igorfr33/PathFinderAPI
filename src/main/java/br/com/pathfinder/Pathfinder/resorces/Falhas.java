@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.pathfinder.Pathfinder.models.Bludgeoning;
 import br.com.pathfinder.Pathfinder.models.Melee;
+import br.com.pathfinder.Pathfinder.models.Ranged;
+import br.com.pathfinder.Pathfinder.models.Spell;
+import br.com.pathfinder.Pathfinder.models.Unarmed;
 import br.com.pathfinder.Pathfinder.repository.MeleeRepository;
 import br.com.pathfinder.Pathfinder.repository.RangedRepository;
 import br.com.pathfinder.Pathfinder.repository.SpellRepository;
@@ -35,6 +38,24 @@ public class Falhas {
 	@GetMapping("/melee/{id}")
 	public Melee melee(@PathVariable(value="id") long id){
 		return meleeRepository.findById(id);
+	}
+	
+	@ApiOperation(value="Retorna uma falha Ranged")
+	@GetMapping("/ranged/{id}")
+	public Ranged ranged(@PathVariable(value="id") long id){
+		return rangedRepository.findById(id);
+	}
+	
+	@ApiOperation(value="Retorna uma falha Unarmed")
+	@GetMapping("/unarmed/{id}")
+	public Unarmed unarmed(@PathVariable(value="id") long id){
+		return unarmedRepository.findById(id);
+	}
+	
+	@ApiOperation(value="Retorna uma falha Spell")
+	@GetMapping("/spell/{id}")
+	public Spell spell(@PathVariable(value="id") long id){
+		return spellRepository.findById(id);
 	}
 
 }
